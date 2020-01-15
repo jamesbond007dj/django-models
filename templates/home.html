@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for gibson in object_list %}
+    <div>
+        <img class="mainMenu" src="{{gibson.field_name}}"/></img>
+        <span> <a href="{% url 'gibson_detail' gibson.pk %}">{{ gibson.title }}</a></span>
+    </div>
+    {% endfor %}
+{% endblock content %}
+
+
